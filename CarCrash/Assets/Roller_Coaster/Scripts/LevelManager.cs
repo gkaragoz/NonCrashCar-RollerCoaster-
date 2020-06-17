@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-
-
+    public CameraMovement cameraMovement;
+    public ParticleSystem[] vfx;
 
     [Header("DEBUG DONT CHANGE")]
     [SerializeField]
     private int _maxLevel = 0;
 
+
+    public static int currentLevelIndex = 0;
     public static LevelManager instance;
 
     private void Awake()
@@ -28,66 +30,54 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(instance);
 
 
-        _maxLevel = SceneManager.sceneCountInBuildSettings - 1;
-
-        //LoadLevel(1);
     }
 
-    private void UnloadCurrentLevel(int currentLevel)
+    private void Start()
     {
-        Debug.Log("Unloading level " + currentLevel);
-        SceneManager.UnloadSceneAsync(currentLevel);
+        currentLevelIndex = 1;// PlayerPrefs.GetInt("LevelIndex");
+        LoadLevel(currentLevelIndex);
+        cameraMovement.GoToLevel(currentLevelIndex);
     }
 
-    private void LoadLevel(int nextLevel)
+    public static void UnloadLevel(int levelIndex)
     {
-        if (nextLevel > _maxLevel)
-        {
-            Debug.LogWarning("There is no level to open in build settings.");
-            return;
-        }
-
-        Debug.Log("Level " + nextLevel + " is loaded.");
-        SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
-
-        int preparationLevel = nextLevel + 1;
-
-        if (preparationLevel > _maxLevel)
-        {
-            Debug.LogWarning("No more new levels. Not gonna prepare new scenes.");
-            return;
-        }
-
-        Debug.Log("Level " + preparationLevel + " is also prepared.");
-        SceneManager.LoadSceneAsync(preparationLevel, LoadSceneMode.Additive);
+        Debug.Log("Unloading level " + levelIndex);
+        SceneManager.UnloadSceneAsync(levelIndex);
     }
 
-    private void NextLevel()
+    public static void LoadLevel(int levelIndex)
     {
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(currentLevel);
-        int nextLevel = currentLevel + 1;
-
-        if (currentLevel == _maxLevel)
-        {
-            Debug.LogWarning("Last level is completed.");
-            return;
-        }
-        UnloadCurrentLevel(currentLevel);
-
-        LoadLevel(nextLevel);
+        Debug.Log("Level " + levelIndex + " is also prepared.");
+        SceneManager.LoadSceneAsync(levelIndex, LoadSceneMode.Additive);
     }
 
-    private void Update()
+
+
+
+
+
+    public void PlayVFX()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        foreach (var item in vfx)
         {
-            LoadLevel(1);
+            item.Play();
         }
-        if (Input.GetKeyDown(KeyCode.B))
+    }
+
+    public void StopVFX()
+    {
+        foreach (var item in vfx)
         {
-            NextLevel();
+            item.Stop();
         }
+    }
+
+    public void FinishLevel()
+    {
+        currentLevelIndex += 1;
+        cameraMovement.GoToLevel(currentLevelIndex);
+        StopVFX();
+
     }
 
 }

@@ -4,37 +4,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI txtDiamondCount;
-    public TextMeshProUGUI txtTapToPlay;
 
-    public GameObject VfxParent;
+
     public PathFollower[] players;
     public GameObject[] golds;
+    private int levelIndex = -1;
 
-    public GameObject failPanel;
-    public GameObject succesPanel;
-
-
-    int index = 0;
+    int playerIndex = 0;
     int totalGoldCount = 0;
     int currentGoldCount = 0;
 
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
     private void Start()
     {
         totalGoldCount = golds.Length;
-        txtDiamondCount.text = currentGoldCount + " / " + totalGoldCount;
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
+    {
+        if (levelIndex == -1)
+        {
+            levelIndex = scene.buildIndex;
+        }
+    }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (LevelManager.currentLevelIndex == levelIndex)
         {
-            txtTapToPlay.gameObject.SetActive(false);
+            UIManager.instance.SetDiamondText(currentGoldCount + " / " + totalGoldCount);
+
+        }
+
+        if (Input.GetMouseButtonDown(0) && LevelManager.currentLevelIndex == levelIndex)
+        {
+            UIManager.instance.CloseTabToPlay();
             MovePlayer();
         }
     }
@@ -42,45 +55,25 @@ public class GameManager : MonoBehaviour
 
     public void CollectGold()
     {
-
         currentGoldCount += 1;
-        txtDiamondCount.text = currentGoldCount + " / " + totalGoldCount;
+        UIManager.instance.SetDiamondText(currentGoldCount + " / " + totalGoldCount);
         if (currentGoldCount == totalGoldCount)
         {
-            OpenSuccesPanel();
-            VfxParent.SetActive(true);
+            UIManager.instance.OpenSuccesPanel();
+            LevelManager.instance.PlayVFX();
         }
     }
 
     public void MovePlayer()
     {
-        if (index == players.Length)
+        if (playerIndex == players.Length)
         {
             return;
         }
-        players[index].startButton = true;
-        index++;
+        players[playerIndex].startButton = true;
+        playerIndex++;
     }
 
-    public void OpenFailPanel()
-    {
-        failPanel.SetActive(true);
-    }
-
-    public void CloseFailPanel()
-    {
-        failPanel.SetActive(false);
-    }
-
-    public void OpenSuccesPanel()
-    {
-        succesPanel.SetActive(true);
-    }
-
-    public void CloseSuccesPanel()
-    {
-        succesPanel.SetActive(false);
-    }
 
 
 
