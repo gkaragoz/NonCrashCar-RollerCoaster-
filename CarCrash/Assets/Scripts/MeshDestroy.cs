@@ -13,13 +13,14 @@ public class MeshDestroy : MonoBehaviour
     public int CutCascades = 1;
     public float ExplodeForce = 0;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            DestroyMesh();
+        }
     }
-
-
 
     public void DestroyMesh()
     {

@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour
+{
 
-    [Header("Camera")]
-    [SerializeField]
-    private Vector3 _cameraPosition = Vector3.zero;
-    [SerializeField]
-    private Vector3 _cameraRotation = Vector3.zero;
+
 
     [Header("DEBUG DONT CHANGE")]
     [SerializeField]
@@ -17,30 +14,35 @@ public class LevelManager : MonoBehaviour {
 
     public static LevelManager instance;
 
-    private void Awake() {
-        if (instance == null) {
+    private void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
-        } else if (instance != this) {
+        }
+        else if (instance != this)
+        {
             Destroy(gameObject);
         }
 
         DontDestroyOnLoad(instance);
 
-        Camera.main.transform.localPosition = _cameraPosition;
-        Camera.main.transform.localRotation = Quaternion.Euler(_cameraRotation);
 
         _maxLevel = SceneManager.sceneCountInBuildSettings - 1;
 
         //LoadLevel(1);
     }
 
-    private void UnloadCurrentLevel(int currentLevel) {
+    private void UnloadCurrentLevel(int currentLevel)
+    {
         Debug.Log("Unloading level " + currentLevel);
         SceneManager.UnloadSceneAsync(currentLevel);
     }
 
-    private void LoadLevel(int nextLevel) {
-        if (nextLevel > _maxLevel) {
+    private void LoadLevel(int nextLevel)
+    {
+        if (nextLevel > _maxLevel)
+        {
             Debug.LogWarning("There is no level to open in build settings.");
             return;
         }
@@ -50,7 +52,8 @@ public class LevelManager : MonoBehaviour {
 
         int preparationLevel = nextLevel + 1;
 
-        if (preparationLevel > _maxLevel) {
+        if (preparationLevel > _maxLevel)
+        {
             Debug.LogWarning("No more new levels. Not gonna prepare new scenes.");
             return;
         }
@@ -59,12 +62,14 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadSceneAsync(preparationLevel, LoadSceneMode.Additive);
     }
 
-    private void NextLevel() {
+    private void NextLevel()
+    {
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
         Debug.Log(currentLevel);
         int nextLevel = currentLevel + 1;
 
-        if (currentLevel == _maxLevel) {
+        if (currentLevel == _maxLevel)
+        {
             Debug.LogWarning("Last level is completed.");
             return;
         }
@@ -73,11 +78,14 @@ public class LevelManager : MonoBehaviour {
         LoadLevel(nextLevel);
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.A)) {
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
             LoadLevel(1);
         }
-        if (Input.GetKeyDown(KeyCode.B)) {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
             NextLevel();
         }
     }

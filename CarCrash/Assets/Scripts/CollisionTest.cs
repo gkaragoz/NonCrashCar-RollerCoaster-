@@ -13,6 +13,12 @@ public class CollisionTest : MonoBehaviour
             Destroy(collision.gameObject);
             gm.CollectGold();
         }
+        if (collision.gameObject.tag == "Player")
+        {
+            md.DestroyMesh();
+            Time.timeScale = .5f;
+
+        }
 
         Debug.Log(collision.gameObject.name);
     }

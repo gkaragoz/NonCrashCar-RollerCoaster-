@@ -8,10 +8,15 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI txtDiamondCount;
+    public TextMeshProUGUI txtTapToPlay;
 
     public GameObject VfxParent;
     public PathFollower[] players;
     public GameObject[] golds;
+
+    public GameObject failPanel;
+    public GameObject succesPanel;
+
 
     int index = 0;
     int totalGoldCount = 0;
@@ -20,7 +25,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        golds = GameObject.FindGameObjectsWithTag("Gold");
         totalGoldCount = golds.Length;
         txtDiamondCount.text = currentGoldCount + " / " + totalGoldCount;
     }
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            txtTapToPlay.gameObject.SetActive(false);
             MovePlayer();
         }
     }
@@ -42,6 +47,7 @@ public class GameManager : MonoBehaviour
         txtDiamondCount.text = currentGoldCount + " / " + totalGoldCount;
         if (currentGoldCount == totalGoldCount)
         {
+            OpenSuccesPanel();
             VfxParent.SetActive(true);
         }
     }
@@ -55,6 +61,27 @@ public class GameManager : MonoBehaviour
         players[index].startButton = true;
         index++;
     }
+
+    public void OpenFailPanel()
+    {
+        failPanel.SetActive(true);
+    }
+
+    public void CloseFailPanel()
+    {
+        failPanel.SetActive(false);
+    }
+
+    public void OpenSuccesPanel()
+    {
+        succesPanel.SetActive(true);
+    }
+
+    public void CloseSuccesPanel()
+    {
+        succesPanel.SetActive(false);
+    }
+
 
 
 }
