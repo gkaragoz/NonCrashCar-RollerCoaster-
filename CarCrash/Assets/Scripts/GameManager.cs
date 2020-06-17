@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public TextMeshProUGUI txtDiamondCount;
 
     public GameObject VfxParent;
     public PathFollower[] players;
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         golds = GameObject.FindGameObjectsWithTag("Gold");
         totalGoldCount = golds.Length;
+        txtDiamondCount.text = currentGoldCount + " / " + totalGoldCount;
     }
 
 
@@ -36,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
 
         currentGoldCount += 1;
+        txtDiamondCount.text = currentGoldCount + " / " + totalGoldCount;
         if (currentGoldCount == totalGoldCount)
         {
             VfxParent.SetActive(true);
