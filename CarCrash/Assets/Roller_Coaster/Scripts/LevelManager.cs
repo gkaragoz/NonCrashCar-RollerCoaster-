@@ -9,8 +9,7 @@ public class LevelManager : MonoBehaviour
     public ParticleSystem[] vfx;
 
     [Header("DEBUG DONT CHANGE")]
-    [SerializeField]
-    private int _maxLevel = 0;
+
 
 
     public static int currentLevelIndex = 0;
