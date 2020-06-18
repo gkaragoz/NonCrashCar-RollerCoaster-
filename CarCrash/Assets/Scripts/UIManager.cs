@@ -49,6 +49,19 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void OpenFailPanel()
+    {
+        failPanel.SetActive(true);
+    }
+    public void RestartScene()
+    {
+
+    }
+    public void CloseFailPanel()
+    {
+        failPanel.SetActive(false);
+    }
+
     public void NextLevel()
     {
         CloseSuccesPanel();

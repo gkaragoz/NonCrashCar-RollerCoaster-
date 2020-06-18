@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Roller_Coaster/Scenes/RollerCoaster_All 1.unity
     guid: cbc5c34af83e80848923a1c783bd1756
+  - enabled: 1
+    path: Assets/Scenes/EmptyScene.unity
+    guid: d905983808a6aa842b311be44fba7131
   m_configObjects: {}
