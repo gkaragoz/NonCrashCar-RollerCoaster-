@@ -8,11 +8,7 @@ public class CollisionTest : MonoBehaviour
     public MeshDestroy md;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Gold")
-        {
-            Destroy(collision.gameObject);
-            gm.CollectGold();
-        }
+
         if (collision.gameObject.tag == "Player")
         {
             md.DestroyMesh();
@@ -21,5 +17,15 @@ public class CollisionTest : MonoBehaviour
         }
 
         Debug.Log(collision.gameObject.name);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Gold")
+        {
+            other.gameObject.GetComponent<DiamondCollect>().CollectGold();
+            Destroy(other.gameObject);
+            gm.CollectGold();
+        }
     }
 }
