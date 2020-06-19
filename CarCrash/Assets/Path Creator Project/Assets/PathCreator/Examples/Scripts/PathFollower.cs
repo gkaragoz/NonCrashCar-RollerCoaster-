@@ -6,6 +6,8 @@ namespace PathCreation.Examples
     // Depending on the end of path instruction, will either loop, reverse, or stop at the end of the path.
     public class PathFollower : MonoBehaviour
     {
+        public GameObject playerIndicator;
+        public Collider playerCollider;
         public bool startButton;
         public PathCreator pathCreator;
         public EndOfPathInstruction endOfPathInstruction;
