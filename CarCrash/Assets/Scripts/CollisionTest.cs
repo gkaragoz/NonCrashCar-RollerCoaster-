@@ -16,12 +16,13 @@ public class CollisionTest : MonoBehaviour
             md.DestroyMesh();
             LeanTween.delayedCall(3, () =>
             {
+                Debug.Log("Fail çalıştı");
                 UIManager.instance.OpenFailPanel();
             });
 
         }
 
-        Debug.Log(collision.gameObject.name);
+
     }
 
 
