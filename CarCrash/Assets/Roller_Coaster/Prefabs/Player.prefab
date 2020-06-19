@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 850484070159019458}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: PlayerPassive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33aabe1a2dec93349b06e6e5dc51bc06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIndicator: {fileID: 0}
   startButton: 0
   pathCreator: {fileID: 0}
   endOfPathInstruction: 2

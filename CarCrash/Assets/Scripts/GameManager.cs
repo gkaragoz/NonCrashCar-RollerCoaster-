@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         totalGoldCount = golds.Length;
+        players[playerIndex].playerIndicator.SetActive(true);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
@@ -66,12 +67,18 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayer()
     {
-        if (playerIndex == players.Length)
+
+        players[playerIndex].tag = "Player";
+        players[playerIndex].playerIndicator.SetActive(false);
+        players[playerIndex].startButton = true;
+        players[playerIndex].playerCollider.enabled = true;
+        if (playerIndex == players.Length - 1)
         {
             return;
         }
-        players[playerIndex].startButton = true;
         playerIndex++;
+        players[playerIndex].playerIndicator.SetActive(true);
+
     }
 
 
