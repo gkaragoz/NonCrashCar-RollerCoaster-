@@ -6,26 +6,33 @@ public class CollisionTest : MonoBehaviour
 {
     public GameManager gm;
     public MeshDestroy md;
+    public CharacterRagdoll cr;
     private void OnCollisionEnter(Collision collision)
     {
 
         if (collision.gameObject.tag == "Player")
         {
+            cr.Explosion();
             md.DestroyMesh();
-            Time.timeScale = .5f;
+            LeanTween.delayedCall(3, () =>
+            {
+                UIManager.instance.OpenFailPanel();
+            });
 
         }
 
         Debug.Log(collision.gameObject.name);
     }
 
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Gold")
         {
             other.gameObject.GetComponent<DiamondCollect>().CollectGold();
-            Destroy(other.gameObject);
             gm.CollectGold();
+            Destroy(other.gameObject);
         }
     }
 }
