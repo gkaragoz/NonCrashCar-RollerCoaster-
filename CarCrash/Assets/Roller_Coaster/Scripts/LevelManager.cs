@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public CameraMovement cameraMovement;
     public ParticleSystem[] vfx;
-
+    int sceneCount;
     [Header("DEBUG DONT CHANGE")]
 
 
@@ -33,6 +33,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        sceneCount = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
+        Debug.Log(sceneCount);
         currentLevelIndex = 1;// PlayerPrefs.GetInt("LevelIndex");
         LoadLevel(currentLevelIndex);
         cameraMovement.GoToLevel(currentLevelIndex);
@@ -73,9 +75,27 @@ public class LevelManager : MonoBehaviour
 
     public void FinishLevel()
     {
-        currentLevelIndex += 1;
-        cameraMovement.GoToLevel(currentLevelIndex);
-        StopVFX();
+        Debug.Log(currentLevelIndex);
+
+
+        if (currentLevelIndex == sceneCount - 2)
+        {
+            currentLevelIndex = Random.Range(1, currentLevelIndex - 2);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(currentLevelIndex);
+            cameraMovement.GoToLevel(currentLevelIndex);
+
+            return;
+        }
+        else
+        {
+            currentLevelIndex += 1;
+
+            cameraMovement.GoToLevel(currentLevelIndex);
+
+
+            StopVFX();
+        }
+
 
     }
 

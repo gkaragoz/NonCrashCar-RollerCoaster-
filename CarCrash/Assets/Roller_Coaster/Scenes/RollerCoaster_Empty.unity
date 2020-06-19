@@ -289,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12cc39d6128d3849b232b1f9a5787c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  easeType: 7
   cameraParent: {fileID: 1534352936}
   levelChangeSpeed: 1
 --- !u!1 &419759700 stripped
