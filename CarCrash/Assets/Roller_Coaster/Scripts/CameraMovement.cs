@@ -12,9 +12,9 @@ public class CameraMovement : MonoBehaviour
     public void GoToLevel(int index)
     {
 
-        Vector3 nextPos = new Vector3(cameraParent.transform.position.x, cameraParent.transform.position.y, (100 * index + 10) - 100);
+        Vector3 nextPos = new Vector3(cameraParent.transform.position.x, cameraParent.transform.position.y, (200 * index + 10) - 200);
 
-        if (Vector3.Distance(cameraParent.transform.position, nextPos) < 110)
+        if (Vector3.Distance(cameraParent.transform.position, nextPos) < 211)
         {
             LeanTween.move(cameraParent, nextPos, levelChangeSpeed).setEase(easeType).setOnComplete(() =>
             {

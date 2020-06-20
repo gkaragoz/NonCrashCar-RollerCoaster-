@@ -60,7 +60,11 @@ public class GameManager : MonoBehaviour
         UIManager.instance.SetDiamondText(currentGoldCount + " / " + totalGoldCount);
         if (currentGoldCount == totalGoldCount)
         {
-            UIManager.instance.OpenSuccesPanel();
+            LeanTween.delayedCall(3, () =>
+            {
+                UIManager.instance.NextLevel();
+            });
+            //UIManager.instance.OpenSuccesPanel();
             LevelManager.instance.PlayVFX();
         }
     }
