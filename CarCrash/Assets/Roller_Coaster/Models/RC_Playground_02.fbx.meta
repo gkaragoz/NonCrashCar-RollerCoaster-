@@ -3,7 +3,27 @@ guid: 3d1041baed49d3044a3f39425e1e8a23
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columns
+    second: {fileID: 2100000, guid: 6d64514ad8d4e3d4ea8a16d795a91e16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Platform
+    second: {fileID: 2100000, guid: 656c917a587e4c74499d4ea2ccd5dafb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rail_Step
+    second: {fileID: 2100000, guid: 742c90c5894c0a947a3c5b1924da64ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rails
+    second: {fileID: 2100000, guid: 8c4f4823ff4d7e8409c4c5eb19b517ce, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
