@@ -73,6 +73,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void RestartLevel()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(currentLevelIndex);
+        SceneManager.LoadSceneAsync(currentLevelIndex + 1, LoadSceneMode.Additive);
+        cameraMovement.GoToLevel(currentLevelIndex);
+    }
+
     public void FinishLevel()
     {
         Debug.Log(currentLevelIndex);
@@ -81,7 +88,7 @@ public class LevelManager : MonoBehaviour
         if (currentLevelIndex == sceneCount - 2)
         {
             currentLevelIndex = Random.Range(1, currentLevelIndex - 2);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(currentLevelIndex);
+            SceneManager.LoadScene(currentLevelIndex);
             cameraMovement.GoToLevel(currentLevelIndex);
 
             return;
