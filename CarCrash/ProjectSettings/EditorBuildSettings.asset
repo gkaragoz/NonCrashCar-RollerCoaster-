@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Roller_Coaster/Scenes/RollerCoaster_002.unity
     guid: 20f315c70c281e54db63dd3f8f619c63
   - enabled: 1
+    path: Assets/Roller_Coaster/Scenes/RollerCoaster_003.unity
+    guid: b6a668e42965d6047ad45cb884ec4897
+  - enabled: 1
     path: Assets/Roller_Coaster/Scenes/RollerCoaster_004.unity
     guid: 256f4e070b4768e4d8568da9b2e160a2
   - enabled: 1
@@ -44,9 +47,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Roller_Coaster/Scenes/RollerCoaster_012.unity
     guid: 479cbe5dc12a32b49b74fc19ea90a370
-  - enabled: 1
-    path: Assets/Roller_Coaster/Scenes/RollerCoaster_013.unity
-    guid: b6a668e42965d6047ad45cb884ec4897
   - enabled: 1
     path: Assets/Scenes/EmptyScene.unity
     guid: d905983808a6aa842b311be44fba7131
