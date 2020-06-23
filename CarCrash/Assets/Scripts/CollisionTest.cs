@@ -12,6 +12,7 @@ public class CollisionTest : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            cr.transform.SetParent(null);
             cr.Explosion();
             md.DestroyMesh();
             LeanTween.delayedCall(3, () =>

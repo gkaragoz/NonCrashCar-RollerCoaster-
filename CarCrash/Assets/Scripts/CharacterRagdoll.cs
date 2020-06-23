@@ -18,6 +18,7 @@ public class CharacterRagdoll : MonoBehaviour
         if (isMoving)
         {
             transform.position = target.transform.position - offset;
+            transform.rotation = target.transform.rotation;
 
         }
         if (Input.GetKeyDown(KeyCode.S))
@@ -29,11 +30,12 @@ public class CharacterRagdoll : MonoBehaviour
 
     public void Explosion()
     {
+        //pm.mode = PuppetMaster.Mode.Active;
         isMoving = false;
-        anim.enabled = false;
+        //anim.enabled = false;
         hitPart.velocity = Vector3.zero;
-        hitPart.AddForce(Vector3.up * jumpForce);
         pm.state = PuppetMaster.State.Dead;
+        hitPart.AddForce(Vector3.up * jumpForce);
 
     }
 
