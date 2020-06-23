@@ -62,10 +62,19 @@ public class GameManager : MonoBehaviour
         {
             LeanTween.delayedCall(3, () =>
             {
+                SetTagToPassive();
                 UIManager.instance.NextLevel();
             });
             //UIManager.instance.OpenSuccesPanel();
             LevelManager.instance.PlayVFX();
+        }
+    }
+
+    public void SetTagToPassive()
+    {
+        foreach (var player in players)
+        {
+            player.tag = "PlayerPassive";
         }
     }
 
