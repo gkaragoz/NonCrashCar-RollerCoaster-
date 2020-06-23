@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 7dd309cfff5ea0b408440e5dfd5850fc,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -141,14 +141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 320183170}
     m_Modifications:
-    - target: {fileID: 1123213371, guid: 9d6eb68f4fd4ece49a493aac8625628d, type: 3}
-      propertyPath: m_Layer
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1123213372, guid: 9d6eb68f4fd4ece49a493aac8625628d, type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1672317804957326466, guid: 9d6eb68f4fd4ece49a493aac8625628d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -208,11 +200,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera_Lights
-      objectReference: {fileID: 0}
-    - target: {fileID: 8565696851576654914, guid: 9d6eb68f4fd4ece49a493aac8625628d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6eb68f4fd4ece49a493aac8625628d, type: 3}

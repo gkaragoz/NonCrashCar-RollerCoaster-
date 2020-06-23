@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1123213374}
   - component: {fileID: 1123213373}
   - component: {fileID: 1123213372}
-  m_Layer: 0
+  - component: {fileID: 3454553341180885497}
+  m_Layer: 15
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,6 +95,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3454553341180885497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123213371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb0cf796ebf1184d8a80ad59e1ce896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _colors:
+  - {r: 0.7490196, g: 0.43137255, b: 0.35686275, a: 1}
+  - {r: 0.7490196, g: 0.35686275, b: 0.49019608, a: 1}
+  - {r: 0.654902, g: 0.35686275, b: 0.7490196, a: 1}
+  - {r: 0.4, g: 0.35686275, b: 0.7490196, a: 1}
+  - {r: 0.35686275, g: 0.50980395, b: 0.7490196, a: 1}
+  - {r: 0.42352942, g: 0.7490196, b: 0.35686275, a: 1}
+  swatchingRenderer: {fileID: 0}
+  _currentColor: {r: 0.7490196, g: 0.43137258, b: 0.35686275, a: 1}
 --- !u!1 &1672317803268895312
 GameObject:
   m_ObjectHideFlags: 0
