@@ -437,8 +437,13 @@ PrefabInstance:
     - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: endOfPathInstruction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
+        type: 3}
+      propertyPath: pathCreator
+      value: 
+      objectReference: {fileID: 2046456263}
     - target: {fileID: 8469565831716491039, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -2946,8 +2951,13 @@ PrefabInstance:
     - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: endOfPathInstruction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
+        type: 3}
+      propertyPath: pathCreator
+      value: 
+      objectReference: {fileID: 496485784}
     - target: {fileID: 8469565831716491039, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -4423,8 +4433,13 @@ PrefabInstance:
     - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: endOfPathInstruction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
+        type: 3}
+      propertyPath: pathCreator
+      value: 
+      objectReference: {fileID: 651806584}
     - target: {fileID: 8469565831716491039, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -5112,8 +5127,13 @@ PrefabInstance:
     - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: endOfPathInstruction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
+        type: 3}
+      propertyPath: pathCreator
+      value: 
+      objectReference: {fileID: 519094195}
     - target: {fileID: 8469565831716491039, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -7014,8 +7034,13 @@ PrefabInstance:
     - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: endOfPathInstruction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
+        type: 3}
+      propertyPath: pathCreator
+      value: 
+      objectReference: {fileID: 1929819567}
     - target: {fileID: 8469565831716491039, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -7397,8 +7422,13 @@ PrefabInstance:
     - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: endOfPathInstruction
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
+        type: 3}
+      propertyPath: pathCreator
+      value: 
+      objectReference: {fileID: 1911588343}
     - target: {fileID: 8469565831716491039, guid: 7ca201b785ca0614a83729e77552a389,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -9335,7 +9365,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 90
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
