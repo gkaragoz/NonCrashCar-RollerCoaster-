@@ -52,7 +52,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7031267857678416196}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -348,7 +348,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7031267857884144481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7031267858705776036}
+        m_MethodName: RestartScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7031267857913033085
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +528,7 @@ GameObject:
   - component: {fileID: 7031267857927097251}
   - component: {fileID: 7031267857927097248}
   - component: {fileID: 7031267857927097249}
+  - component: {fileID: 7031267858705776036}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -607,6 +619,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7031267858705776036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031267857927096414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370d83117107b5f4093e9c3cfcf6c447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtTapToPlay: {fileID: 7031267858182410620}
+  txtDiamondCount: {fileID: 7031267859612369846}
+  succesPanel: {fileID: 7031267858319571957}
+  failPanel: {fileID: 7031267858771332251}
 --- !u!1 &7031267858182410618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7031267858771332250
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1420,7 +1448,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7031267859570869460}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7031267858705776036}
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7031267859612369844
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850484070159019459}
-  m_LocalRotation: {x: -0.12288777, y: 0.26731178, z: 0.0322853, w: 0.9551967}
+  m_LocalRotation: {x: -0.12288489, y: 0.26731154, z: 0.032285046, w: 0.9551971}
   m_LocalPosition: {x: -18.3, y: 7.2, z: -6.6}
   m_LocalScale: {x: 1.7438467, y: 1.94, z: 1.94}
   m_Children:
@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33aabe1a2dec93349b06e6e5dc51bc06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndicator: {fileID: 0}
+  playerIndicator: {fileID: 6402699728525477255}
+  playerCollider: {fileID: 850484070159019460}
   startButton: 0
   pathCreator: {fileID: 0}
   endOfPathInstruction: 2
@@ -178,7 +179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5732924715063152121
 Transform:
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7750758915289246406
 Transform:
   m_ObjectHideFlags: 0

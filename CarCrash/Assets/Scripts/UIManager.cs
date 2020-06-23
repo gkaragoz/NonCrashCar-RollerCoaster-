@@ -55,7 +55,8 @@ public class UIManager : MonoBehaviour
     }
     public void RestartScene()
     {
-
+        CloseFailPanel();
+        LevelManager.instance.RestartLevel();
     }
     public void CloseFailPanel()
     {
