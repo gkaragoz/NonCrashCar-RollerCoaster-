@@ -6,12 +6,17 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    public TextMeshProUGUI txtTapToPlay;
+
+    public GameObject tapToPlay;
     public TextMeshProUGUI txtDiamondCount;
 
     public TxtLevelCompletedTween txtSuccessMsg;
+    public TxtLevelFailedTween txtFailTween;
+
     public GameObject failPanel;
 
+
+    bool isFailActive;
     private void Awake()
     {
         if (instance == null)
@@ -35,7 +40,7 @@ public class UIManager : MonoBehaviour
 
     public void CloseTabToPlay()
     {
-        txtTapToPlay.gameObject.SetActive(false);
+        tapToPlay.SetActive(false);
     }
 
     public void CloseSuccesPanel()
@@ -50,15 +55,25 @@ public class UIManager : MonoBehaviour
 
     public void OpenFailPanel()
     {
-        failPanel.SetActive(true);
+        if (isFailActive == false)
+        {
+            Debug.Log("Fail çalıştı");
+
+            failPanel.SetActive(true);
+            txtFailTween.Show();
+            isFailActive = true;
+        }
     }
     public void RestartScene()
     {
+        isFailActive = false;
         CloseFailPanel();
         LevelManager.instance.RestartLevel();
     }
     public void CloseFailPanel()
     {
+        txtFailTween.Hide();
+
         failPanel.SetActive(false);
     }
 

@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     public float levelChangeSpeed = 1;
     int sceneCount;
 
-    public void GoToLevel(int index)
+    public void GoToLevel(int index, bool canUnload)
     {
         GameObject.FindObjectOfType<GroundColorChanger>().ChangeColor();
         Vector3 nextPos = new Vector3(cameraParent.transform.position.x, cameraParent.transform.position.y, (200 * index + 10) - 200);
@@ -20,7 +20,11 @@ public class CameraMovement : MonoBehaviour
         {
             LeanTween.move(cameraParent, nextPos, levelChangeSpeed).setEase(easeType).setOnComplete(() =>
             {
-                LevelManager.UnloadLevel(LevelManager.currentLevelIndex - 1);
+                if (canUnload)
+                {
+                    LevelManager.UnloadLevel(LevelManager.currentLevelIndex - 1);
+
+                }
                 LevelManager.LoadLevel(LevelManager.currentLevelIndex + 1);
             });
         }

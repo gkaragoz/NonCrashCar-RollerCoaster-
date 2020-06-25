@@ -89,18 +89,20 @@ public class GameManager : MonoBehaviour
 
     public void MovePlayer()
     {
-
-        players[playerIndex].tag = "Player";
-        players[playerIndex].playerIndicator.SetActive(false);
-        players[playerIndex].startButton = true;
-        players[playerIndex].playerCollider.enabled = true;
-        if (playerIndex == players.Length - 1)
+        if (players[playerIndex])
         {
-            return;
-        }
-        playerIndex++;
-        players[playerIndex].playerIndicator.SetActive(true);
 
+            players[playerIndex].tag = "Player";
+            players[playerIndex].playerIndicator.SetActive(false);
+            players[playerIndex].startButton = true;
+            players[playerIndex].playerCollider.enabled = true;
+            if (playerIndex == players.Length - 1)
+            {
+                return;
+            }
+            playerIndex++;
+            players[playerIndex].playerIndicator.SetActive(true);
+        }
     }
 
 

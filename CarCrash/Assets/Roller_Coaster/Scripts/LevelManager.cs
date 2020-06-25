@@ -37,13 +37,14 @@ public class LevelManager : MonoBehaviour
         Debug.Log(sceneCount);
         currentLevelIndex = 1;// PlayerPrefs.GetInt("LevelIndex");
         LoadLevel(currentLevelIndex);
-        cameraMovement.GoToLevel(currentLevelIndex);
+        cameraMovement.GoToLevel(currentLevelIndex, true);
     }
 
     public static void UnloadLevel(int levelIndex)
     {
         Debug.Log("Unloading level " + levelIndex);
         SceneManager.UnloadSceneAsync(levelIndex);
+
     }
 
     public static void LoadLevel(int levelIndex)
@@ -76,8 +77,8 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(currentLevelIndex);
-        SceneManager.LoadSceneAsync(currentLevelIndex + 1, LoadSceneMode.Additive);
-        cameraMovement.GoToLevel(currentLevelIndex);
+        //SceneManager.LoadSceneAsync(currentLevelIndex + 1, LoadSceneMode.Additive);
+        cameraMovement.GoToLevel(currentLevelIndex, false);
     }
 
     public void FinishLevel()
@@ -89,7 +90,7 @@ public class LevelManager : MonoBehaviour
         {
             currentLevelIndex = Random.Range(1, currentLevelIndex - 2);
             SceneManager.LoadScene(currentLevelIndex);
-            cameraMovement.GoToLevel(currentLevelIndex);
+            cameraMovement.GoToLevel(currentLevelIndex, true);
 
             return;
         }
@@ -97,7 +98,7 @@ public class LevelManager : MonoBehaviour
         {
             currentLevelIndex += 1;
 
-            cameraMovement.GoToLevel(currentLevelIndex);
+            cameraMovement.GoToLevel(currentLevelIndex, true);
 
 
             StopVFX();
