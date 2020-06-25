@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
         {
             UIManager.instance.CloseTabToPlay();
             MovePlayer();
+            UIManager.instance.StopTapTimer();
+            UIManager.instance.StartTapTimer();
         }
     }
 
@@ -60,11 +62,13 @@ public class GameManager : MonoBehaviour
         UIManager.instance.SetDiamondText(currentGoldCount + " / " + totalGoldCount);
         if (currentGoldCount == totalGoldCount)
         {
+            UIManager.instance.StopTapTimer();
             CloseCollisions();
             LeanTween.delayedCall(2, () =>
             {
                 SetTagToPassive();
                 UIManager.instance.NextLevel();
+
             });
             UIManager.instance.OpenSuccesPanel();
             LevelManager.instance.PlayVFX();

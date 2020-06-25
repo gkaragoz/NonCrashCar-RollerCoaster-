@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject failPanel;
 
+    Coroutine timerCoroutine;
 
     bool isFailActive;
     private void Awake()
@@ -36,6 +37,12 @@ public class UIManager : MonoBehaviour
     public void SetDiamondText(string input)
     {
         txtDiamondCount.text = input;
+    }
+
+    public void OpenTapToPlay()
+    {
+        tapToPlay.SetActive(true);
+
     }
 
     public void CloseTabToPlay()
@@ -81,5 +88,24 @@ public class UIManager : MonoBehaviour
     {
         CloseSuccesPanel();
         LevelManager.instance.FinishLevel();
+    }
+
+    IEnumerator IStartTapTimer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        OpenTapToPlay();
+    }
+
+    public void StartTapTimer()
+    {
+        timerCoroutine = StartCoroutine(IStartTapTimer(5));
+    }
+
+    public void StopTapTimer()
+    {
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+        }
     }
 }

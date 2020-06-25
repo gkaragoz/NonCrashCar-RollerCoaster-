@@ -17,7 +17,9 @@ public class CollisionTest : MonoBehaviour
             md.DestroyMesh();
             LeanTween.delayedCall(3, () =>
             {
+                UIManager.instance.StopTapTimer();
                 UIManager.instance.OpenFailPanel();
+                UIManager.instance.OpenTapToPlay();
             });
 
         }
@@ -34,6 +36,9 @@ public class CollisionTest : MonoBehaviour
             other.gameObject.GetComponent<DiamondCollect>().CollectGold();
             gm.CollectGold();
             Destroy(other.gameObject);
+            UIManager.instance.StopTapTimer();
+            UIManager.instance.StartTapTimer();
+
         }
     }
 }
