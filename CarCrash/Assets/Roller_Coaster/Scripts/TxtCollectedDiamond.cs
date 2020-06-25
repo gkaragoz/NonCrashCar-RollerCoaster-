@@ -11,6 +11,7 @@ public class TxtCollectedDiamond : MonoBehaviour
     public CanvasGroup targetCanvasGroup;
     public TextMeshProUGUI text;
     public Transform objectToFollow;
+    public ImgOverlayCollectDiamond overlayCollectDiamond;
 
     public void ShowUI()
     {
@@ -24,6 +25,8 @@ public class TxtCollectedDiamond : MonoBehaviour
         {
             targetCanvasGroup.alpha = value;
         });
+
+        overlayCollectDiamond.ShowUp();
     }
 
 
