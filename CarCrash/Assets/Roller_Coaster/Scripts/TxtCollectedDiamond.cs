@@ -15,12 +15,12 @@ public class TxtCollectedDiamond : MonoBehaviour
 
     public void ShowUI()
     {
-        RepositionText();
+        //RepositionText();
 
         targetCanvasGroup.alpha = 1;
 
-        float currentY = text.rectTransform.anchoredPosition.y;
-        LeanTween.moveLocalY(text.gameObject, currentY + animationYOffset, animationSpeed);
+        //float currentY = text.rectTransform.anchoredPosition.y;
+        //LeanTween.moveLocalY(text.gameObject, currentY + animationYOffset, animationSpeed);
         LeanTween.value(1, 0, animationSpeed).setDelay(0.3f).setOnUpdate((float value) =>
         {
             targetCanvasGroup.alpha = value;
