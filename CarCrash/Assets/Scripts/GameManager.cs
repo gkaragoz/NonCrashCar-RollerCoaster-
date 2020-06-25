@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
                 SetTagToPassive();
                 UIManager.instance.NextLevel();
             });
-            //UIManager.instance.OpenSuccesPanel();
+            UIManager.instance.OpenSuccesPanel();
             LevelManager.instance.PlayVFX();
         }
     }

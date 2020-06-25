@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI txtTapToPlay;
     public TextMeshProUGUI txtDiamondCount;
 
-    public GameObject succesPanel;
+    public TxtLevelCompletedTween txtSuccessMsg;
     public GameObject failPanel;
 
     private void Awake()
@@ -40,13 +40,12 @@ public class UIManager : MonoBehaviour
 
     public void CloseSuccesPanel()
     {
-        succesPanel.SetActive(false);
+        txtSuccessMsg.Hide();
 
     }
     public void OpenSuccesPanel()
     {
-        succesPanel.SetActive(true);
-
+        txtSuccessMsg.Show();
     }
 
     public void OpenFailPanel()
