@@ -78,6 +78,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CloseCollisions()
+    {
+
+    }
+
     public void MovePlayer()
     {
 
