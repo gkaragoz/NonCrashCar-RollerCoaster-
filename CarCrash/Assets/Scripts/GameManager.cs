@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour
         UIManager.instance.SetDiamondText(currentGoldCount + " / " + totalGoldCount);
         if (currentGoldCount == totalGoldCount)
         {
-            LeanTween.delayedCall(3, () =>
+            CloseCollisions();
+            LeanTween.delayedCall(2, () =>
             {
                 SetTagToPassive();
                 UIManager.instance.NextLevel();
@@ -80,7 +81,10 @@ public class GameManager : MonoBehaviour
 
     public void CloseCollisions()
     {
-
+        foreach (var player in players)
+        {
+            player.tag = "PlayerPassive";
+        }
     }
 
     public void MovePlayer()

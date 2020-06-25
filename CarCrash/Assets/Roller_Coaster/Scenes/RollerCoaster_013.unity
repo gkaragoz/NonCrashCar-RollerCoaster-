@@ -5001,7 +5001,8 @@ GameObject:
   - component: {fileID: 1234889037}
   - component: {fileID: 1234889036}
   - component: {fileID: 1234889035}
-  m_Layer: 0
+  - component: {fileID: 1234889038}
+  m_Layer: 15
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5069,6 +5070,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1234889038
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234889034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1247523307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7658,7 +7673,8 @@ GameObject:
   - component: {fileID: 2036521882}
   - component: {fileID: 2036521881}
   - component: {fileID: 2036521880}
-  m_Layer: 0
+  - component: {fileID: 2036521883}
+  m_Layer: 15
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7726,6 +7742,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2036521883
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036521879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &2078580702 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7750758915717601693, guid: 7ca201b785ca0614a83729e77552a389,
@@ -7979,7 +8009,8 @@ GameObject:
   - component: {fileID: 2099858819}
   - component: {fileID: 2099858818}
   - component: {fileID: 2099858817}
-  m_Layer: 0
+  - component: {fileID: 2099858820}
+  m_Layer: 15
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8047,6 +8078,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2099858820
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099858816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2142885883
 PrefabInstance:
   m_ObjectHideFlags: 0
