@@ -561,8 +561,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: RC_Playground_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: 8a1b7ed8741e85148af7ef365e90f97a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1b7ed8741e85148af7ef365e90f97a, type: 3}
+--- !u!1 &538651028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8513859187771203891, guid: 8a1b7ed8741e85148af7ef365e90f97a,
+    type: 3}
+  m_PrefabInstance: {fileID: 538651027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &538651029
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538651028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7387706064836869012, guid: 8a1b7ed8741e85148af7ef365e90f97a, type: 3}
 --- !u!1001 &747595769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -630,8 +655,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: RC_Playground_06
       objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: 8a1b7ed8741e85148af7ef365e90f97a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1b7ed8741e85148af7ef365e90f97a, type: 3}
+--- !u!1 &747595770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8513859187771203891, guid: 8a1b7ed8741e85148af7ef365e90f97a,
+    type: 3}
+  m_PrefabInstance: {fileID: 747595769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &747595771
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747595770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7387706064836869012, guid: 8a1b7ed8741e85148af7ef365e90f97a, type: 3}
 --- !u!1001 &753425864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2571,30 +2621,30 @@ MonoBehaviour:
   editorData:
     _bezierPath:
       points:
-      - {x: -4.3945236, y: 0, z: 10.71553}
-      - {x: -1.4897323, y: 0, z: 10.754316}
-      - {x: 2.3352294, y: 0, z: 8.556179}
-      - {x: 4.267785, y: 0, z: 6.387183}
-      - {x: 5.6882567, y: 0, z: 4.7929225}
-      - {x: 6.762111, y: 0, z: 1.8310556}
+      - {x: -4.3945236, y: 0, z: 10.715576}
+      - {x: -1.4897294, y: 0, z: 10.75436}
+      - {x: 2.3352308, y: 0, z: 8.556209}
+      - {x: 4.267785, y: 0, z: 6.387207}
+      - {x: 5.6882586, y: 0, z: 4.792939}
+      - {x: 6.7621126, y: 0, z: 1.8310621}
       - {x: 6.6965027, y: 0, z: -0.30321312}
-      - {x: 6.6273923, y: 0, z: -2.5514078}
+      - {x: 6.627391, y: 0, z: -2.5514078}
       - {x: 5.2824516, y: 0, z: -5.5719237}
       - {x: 3.7100925, y: 0, z: -7.18029}
       - {x: 2.0274315, y: 0, z: -8.9014845}
-      - {x: -1.1682062, y: 0, z: -10.52374}
+      - {x: -1.1682062, y: 0, z: -10.523737}
       - {x: -3.57518, y: 0, z: -10.541983}
-      - {x: -6.397092, y: 0, z: -10.56337}
-      - {x: -10.298098, y: 0, z: -8.837917}
-      - {x: -12.175116, y: 0, z: -6.730681}
-      - {x: -13.661409, y: 0, z: -5.0620914}
-      - {x: -14.449501, y: 0, z: -1.8523741}
+      - {x: -6.397088, y: 0, z: -10.5633745}
+      - {x: -10.298099, y: 0, z: -8.837945}
+      - {x: -12.175116, y: 0, z: -6.730713}
+      - {x: -13.661417, y: 0, z: -5.0621176}
+      - {x: -14.449501, y: 0, z: -1.8523831}
       - {x: -14.388618, y: 0, z: 0.3813572}
-      - {x: -14.334186, y: 0, z: 2.378426}
-      - {x: -13.381233, y: 0, z: 5.1186576}
-      - {x: -12.066212, y: 0, z: 6.6226406}
-      - {x: -10.3491745, y: 0, z: 8.586407}
-      - {x: -7.002852, y: 0, z: 10.680703}
+      - {x: -14.334187, y: 0, z: 2.3784375}
+      - {x: -13.381239, y: 0, z: 5.118687}
+      - {x: -12.066212, y: 0, z: 6.6226807}
+      - {x: -10.349177, y: 0, z: 8.586449}
+      - {x: -7.002853, y: 0, z: 10.680751}
       isClosed: 1
       space: 0
       controlMode: 3
